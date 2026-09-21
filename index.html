@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SlipSense: Multimodal Tactile Learning for Low-Latency and Generalized Slip Detection</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Google+Sans&family=Noto+Sans&family=Castoro&display=swap"
         rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -55,6 +55,7 @@
     .slipsense {
       font-variant: small-caps;
       font-weight: 600;
+      color: #1668b3;
     }
     .venue-badge {
       display: inline-block;
@@ -65,6 +66,261 @@
       font-size: 0.9rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
+    }
+    .brand-rail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      min-height: 78px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .brand-rail .conference-brand img {
+      width: 145px;
+      height: auto;
+      object-fit: contain;
+    }
+    .brand-rail .adi-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-rail .adi-brand img.logo-adi {
+      width: 140px;
+      height: auto;
+      object-fit: contain;
+    }
+    .brand-rail .adi-brand img.logo-dexai {
+      width: 160px;
+      height: auto;
+      object-fit: contain;
+    }
+    .brand-rail a, .brand-rail .adi-brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: opacity 160ms ease;
+    }
+    .brand-rail a:hover, .brand-rail .adi-brand:hover { opacity: 0.7; }
+    .hero-body {
+      padding-top: 48px;
+      padding-bottom: 40px;
+    }
+    section.hero:first-of-type {
+      border-bottom: none;
+    }
+    .hero.teaser {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .hero.teaser .hero-body {
+      padding-bottom: 0;
+    }
+    .publication-title {
+      max-width: 930px;
+      font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
+      font-weight: 750 !important;
+      letter-spacing: -0.04em;
+      line-height: 1.1 !important;
+    }
+    .publication-authors {
+      font-family: 'Inter', 'Google Sans', sans-serif;
+    }
+    .publication-authors .author-block {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.05;
+    }
+    .publication-authors .affiliation-block {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #888;
+      margin-top: 14px;
+      display: inline-block;
+    }
+    .resource-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 20px;
+    }
+    .resource-links .res-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 0 16px;
+      color: #363636;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 9px;
+      box-shadow: 0 2px 7px rgb(0 0 0 / 3%);
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+    .resource-links .res-button:hover {
+      border-color: #1668b3;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
+      transform: translateY(-1px);
+    }
+    .resource-links .res-button--primary {
+      color: #fff;
+      background: #1668b3;
+      border-color: #1668b3;
+    }
+    .resource-links .res-button--primary:hover {
+      background: #114e8a;
+      border-color: #114e8a;
+    }
+    .resource-links .res-button--disabled {
+      color: #aaa;
+      background: #f5f5f5;
+      border-color: #ddd;
+      box-shadow: none;
+      cursor: default;
+      pointer-events: none;
+    }
+    .resource-links .res-button .icon {
+      display: flex;
+      align-items: center;
+    }
+    .resource-links .res-button .icon i { font-size: 1rem; }
+    .section-nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      height: 52px;
+      background: rgb(255 255 255 / 90%);
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      backdrop-filter: blur(16px);
+    }
+    .section-nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .section-nav__links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .section-nav__links a {
+      position: relative;
+      padding: 16px 10px 14px;
+      color: #888;
+      text-decoration: none;
+      font-size: 0.71rem;
+      font-weight: 650;
+      letter-spacing: 0.045em;
+      text-transform: uppercase;
+      transition: color 150ms ease;
+    }
+    .section-nav__links a:hover,
+    .section-nav__links a.is-active {
+      color: #363636;
+    }
+    .section-nav__links a.is-active::after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 0;
+      height: 3px;
+      background: #1668b3;
+      border-radius: 2px;
+    }
+    .citation-layout {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .citation-layout .eyebrow {
+      color: #1668b3;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+    .citation-layout .citation-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .citation-layout .citation-meta {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .citation-actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .citation-actions .citation-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      background: #1668b3;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .citation-actions .citation-link:hover {
+      background: #114e8a;
+    }
+    .copy-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .copy-button:hover {
+      background: #eee;
+    }
+    .copy-button svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+    }
+    .copy-button.is-copied {
+      background: #e8f5e9;
+      border-color: #4caf50;
+      color: #2e7d32;
+    }
+    footer.site-footer {
+      padding: 2rem 0;
+      text-align: center;
+      border-top: 1px solid #e5e5e5;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    footer.site-footer strong {
+      color: #363636;
     }
     .figure-caption {
       font-size: 0.9rem;
@@ -98,17 +354,30 @@
 </head>
 <body>
 
+<div class="brand-rail">
+  <a class="conference-brand" href="https://www.corl.org/" target="_blank" rel="noopener">
+    <img src="./static/images/corl_2026_logo.png" alt="CoRL 2026">
+  </a>
+  <div class="adi-brand">
+    <a href="https://www.analog.com/" target="_blank" rel="noopener">
+      <img class="logo-adi" src="./static/images/adi_logo.png" alt="Analog Devices">
+    </a>
+    <a href="https://www.analog.com/" target="_blank" rel="noopener">
+      <img class="logo-dexai" src="./static/images/dexai_logo_white.png" alt="DexAI">
+    </a>
+  </div>
+</div>
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <span class="venue-badge">CoRL 2026</span>
           <h1 class="title is-1 publication-title">
             <span class="slipsense">SlipSense</span>: Multimodal Tactile Learning for
             Low-Latency and Generalized Slip Detection
           </h1>
-          <div class="is-size-5 publication-authors">
+          <div class="publication-authors" style="line-height: 1.4; margin-top: 12px;">
             <span class="author-block">Tong Jian,</span>
             <span class="author-block">Aditya Thurvas Senthil Kumar,</span>
             <span class="author-block">Xinyi Li,</span>
@@ -122,54 +391,56 @@
             <span class="author-block">Tao Yu</span>
           </div>
 
-          <div class="is-size-5 publication-authors">
-            <!-- TODO: Replace with real affiliations -->
-            <span class="author-block">Analog Devices / DexAI</span>
+          <div class="publication-authors">
+            <span class="affiliation-block">Dexterous AI Group, Analog Devices, Inc.</span>
           </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- Paper Link -->
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <!-- arXiv Link -->
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link -->
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-youtube"></i></span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <!-- Code Link -->
-              <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
-                </a>
-              </span>
-            </div>
-          </div>
+          <nav class="resource-links">
+            <a class="res-button res-button--primary" href="https://arxiv.org/abs/2609.15910" target="_blank" rel="noopener">
+              <span class="icon"><i class="ai ai-arxiv"></i></span>
+              arXiv
+            </a>
+            <a class="res-button" href="https://arxiv.org/pdf/2609.15910" target="_blank" rel="noopener">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              PDF
+            </a>
+            <a class="res-button" href="#video">
+              <span class="icon"><i class="fab fa-youtube"></i></span>
+              Video
+            </a>
+            <span class="res-button res-button--disabled">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              Code
+            </span>
+            <span class="res-button res-button--disabled">
+              <span class="icon"><i class="fas fa-database"></i></span>
+              Dataset
+            </span>
+          </nav>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<nav class="section-nav">
+  <div class="section-nav__inner">
+    <div class="section-nav__links">
+      <a href="#overview" class="is-active">Overview</a>
+      <a href="#video">Video</a>
+      <a href="#system">System</a>
+      <a href="#model">Model</a>
+      <a href="#results">Key Findings</a>
+      <a href="#citation">Reference</a>
+    </div>
+  </div>
+</nav>
+
 <!-- Teaser / Demo Videos -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h2 class="subtitle has-text-centered" style="margin-bottom: 1rem;">
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; margin-bottom: 1rem;">
         <span class="slipsense">SlipSense</span> fuses high-density pressure (<span style="color: #ff9800; font-weight: 600;">Piezo</span>, <span style="color: #ff9800; font-weight: 600;">240 Hz</span>) with high-bandwidth vibration (<span style="color: #2196f3; font-weight: 600;">XL</span>, <span style="color: #2196f3; font-weight: 600;">8 kHz</span>) for accurate, low-latency slip detection that transfers zero-shot across robotic platforms.
       </h2>
       <div class="columns is-centered" style="gap: 0.5rem;">
@@ -209,7 +480,7 @@
 </section>
 
 <!-- Key Results -->
-<section class="section" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+<section class="section" style="padding-top: 0.5rem; padding-bottom: 1rem;">
   <div class="container is-max-desktop">
     <div class="hero-metrics">
       <div class="metric-card">
@@ -229,7 +500,7 @@
 </section>
 
 <!-- Figure 1: At a Glance -->
-<section class="section" style="padding-top: 1rem; padding-bottom: 1.5rem;">
+<section id="overview" class="section" style="padding-top: 1rem; padding-bottom: 1.5rem;">
   <div class="container is-max-desktop">
     <figure>
       <img src="./static/images/highlight.png" alt="SlipSense at a glance: TacV5 sensor on UMI and Tesollo, multimodal signals, frame-level slip prediction" style="width: 100%; border-radius: 8px;">
@@ -241,14 +512,14 @@
 </section>
 
 <!-- Summary Video -->
-<section class="section" style="padding-top: 1rem;">
+<section id="video" class="section" style="padding-top: 1rem; background: #fafafa;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Summary Video</h2>
         <div class="publication-video">
           <video controls muted playsinline style="width: 100%; display: block;">
-            <source src="./static/videos/demo.mov" type="video/mp4">
+            <source src="./static/videos/demo_final.mov" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -258,7 +529,7 @@
 </section>
 
 <!-- Abstract -->
-<section class="section">
+<section class="section" style="background: #fff;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -288,66 +559,36 @@
   </div>
 </section>
 
-<!-- Approach: Sensor & Architecture -->
-<section class="section" style="background: #fafafa;">
+<!-- System & Data Collection -->
+<section id="system" class="section" style="background: #fafafa;">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Approach</h2>
+    <h2 class="title is-3 has-text-centered">System &amp; Data Collection</h2>
 
-    <!-- TacV5 Sensor & Setup -->
-    <div class="columns is-centered" style="margin-bottom: 2rem;">
-      <div class="column is-full">
-        <h3 class="title is-4">TacV5 Multimodal Tactile Sensor</h3>
-        <div class="content has-text-justified">
-          <p>
-            TacV5 integrates a high-density 32&times;32 piezoresistive array (Piezo) with a 3-axis
-            MEMS accelerometer (XL) in a compact fingertip form factor. Piezo captures spatial
-            normal pressure distribution at 240 Hz with ~1.55 taxels/mm&sup2;, while XL captures
-            friction-induced vibration at 8 kHz. We evaluate on two platforms: a customized UMI
-            parallel-jaw gripper and a Tesollo DG-5F 20-DoF dexterous hand.
-          </p>
-        </div>
-        <figure>
-          <img src="./static/images/setup.png" alt="TacV5 sensor, UMI gripper, Tesollo hand, and Mark-10 data collection setup" style="width: 100%; border-radius: 8px;">
-          <figcaption class="figure-caption">
-            <em>Left to right:</em> TacV5 multimodal sensor, customized UMI gripper, Tesollo DG-5F dexterous hand, Mark-10 motorized test stand for ground-truth labeling, and data collection setup.
-          </figcaption>
-        </figure>
-      </div>
+    <h3 class="title is-4">TacV5 Multimodal Tactile Sensor</h3>
+    <div class="content has-text-justified">
+      <p>
+        TacV5 integrates a high-density 32&times;32 piezoresistive array (Piezo) with a 3-axis
+        MEMS accelerometer (XL) in a compact fingertip form factor. Piezo captures spatial
+        normal pressure distribution at 240 Hz with ~1.55 taxels/mm&sup2;, while XL captures
+        friction-induced vibration at 8 kHz. We evaluate on two platforms: a customized UMI
+        parallel-jaw gripper and a Tesollo DG-5F 20-DoF dexterous hand.
+      </p>
     </div>
+    <figure>
+      <img src="./static/images/setup.png" alt="TacV5 sensor, UMI gripper, Tesollo hand, and Mark-10 data collection setup" style="width: 100%; border-radius: 8px;">
+      <figcaption class="figure-caption">
+        <em>Left to right:</em> TacV5 multimodal sensor, customized UMI gripper, Tesollo DG-5F dexterous hand, Mark-10 motorized test stand for ground-truth labeling, and data collection setup.
+      </figcaption>
+    </figure>
 
-    <!-- Architecture -->
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <h3 class="title is-4"><span class="slipsense">SlipSense</span> Architecture</h3>
-        <div class="content has-text-justified">
-          <p>
-            Piezo frames and XL spectrograms are encoded by dedicated backbones, pooled across
-            sensors for variable-cardinality input, fused via cross-modal attention, and passed
-            through a causal temporal classifier that predicts ternary state (no-contact, no-slip,
-            slip) at every frame.
-          </p>
-        </div>
-        <figure>
-          <img src="./static/images/arch.png" alt="SlipSense architecture: Piezo encoder, XL encoder, cross-modal attention, temporal prediction" style="width: 100%; border-radius: 8px;">
-          <figcaption class="figure-caption">
-            <span class="slipsense">SlipSense</span> pipeline: modality-specific encoders, intra-modal pooling, cross-modal attention fusion, and causal temporal prediction.
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Data Collection -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Data Collection</h2>
+    <h3 class="title is-4" style="margin-top: 2.5rem;">Data Collection</h3>
     <div class="content has-text-justified">
       <p>
         A single trial proceeds through six phases: approach, grasp, grasp variation, slip,
         stabilization, and release. The Piezo heatmaps show spatial pressure evolution while the
         XL spectrogram reveals friction-induced vibration transients at slip onset. Together they
         provide complementary cues that neither modality captures alone.
+        We collect a <strong style="color: #1668b3; font-size: 1.05em;">1.4M-frame</strong> dataset spanning 37 objects.
       </p>
     </div>
     <figure>
@@ -366,8 +607,29 @@
   </div>
 </section>
 
+<!-- Model -->
+<section id="model" class="section" style="background: #fff;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered"><span class="slipsense">SlipSense</span> Architecture</h2>
+    <div class="content has-text-justified">
+      <p>
+        Piezo frames and XL spectrograms are encoded by dedicated backbones, pooled across
+        sensors for variable-cardinality input, fused via cross-modal attention, and passed
+        through a causal temporal classifier that predicts ternary state (no-contact, no-slip,
+        slip) at every frame.
+      </p>
+    </div>
+    <figure>
+      <img src="./static/images/arch.png" alt="SlipSense architecture: Piezo encoder, XL encoder, cross-modal attention, temporal prediction" style="width: 100%; border-radius: 8px;">
+      <figcaption class="figure-caption">
+        <span class="slipsense">SlipSense</span> pipeline: modality-specific encoders, intra-modal pooling, cross-modal attention fusion, and causal temporal prediction.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
 <!-- Key Findings & Demonstrations -->
-<section class="section" style="background: #fafafa;">
+<section id="results" class="section" style="background: #fafafa;">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Key Findings</h2>
 
@@ -454,7 +716,7 @@
             Higher spatial density captures finer contact patterns that lower resolutions miss entirely.
           </p>
         </div>
-        <figure style="max-width: 450px; margin: 0 auto;">
+        <figure style="max-width: 350px; margin: 0 auto;">
           <img src="./static/images/ablation_resolution.png" alt="Piezo resolution ablation: 8x8 (83.2%), 16x16 (88.0%), 32x32 (96.7%)" style="width: 100%; border-radius: 8px;">
           <figcaption class="figure-caption">
             Piezo resolution ablation. Dashed line: XL-only baseline. Higher spatial density consistently improves detection.
@@ -475,7 +737,7 @@
             prevention.
           </p>
         </div>
-        <figure style="max-width: 700px; margin: 0 auto;">
+        <figure style="max-width: 550px; margin: 0 auto;">
           <img src="./static/images/real_hand_row2.png" alt="Tesollo dexterous hand deployment with varied slip directions" style="width: 100%; border-radius: 8px;">
           <figcaption class="figure-caption">
             Tesollo 2-finger pinch: varied objects with linear, rotational, and oblique slip &mdash; all zero-shot from UMI training.
@@ -510,7 +772,7 @@
 </section>
 
 <!-- Related Work -->
-<section class="section">
+<section class="section" style="background: #fff;">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Related Work</h2>
 
@@ -535,13 +797,9 @@
               How does the same tactile sensor contribute to downstream dexterous manipulation tasks?
             </p>
             <p>
-              <a href="#" class="external-link button is-small is-rounded is-light">
+              <a href="https://grmmtt.github.io/corl26-touch2trace/" target="_blank" rel="noopener" class="external-link button is-small is-rounded is-light">
                 <span class="icon"><i class="fas fa-globe"></i></span>
                 <span>Webpage</span>
-              </a>
-              <a href="#" class="external-link button is-small is-rounded is-light">
-                <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                <span>Paper</span>
               </a>
             </p>
           </div>
@@ -551,32 +809,94 @@
   </div>
 </section>
 
-<!-- BibTeX -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{slipsense2026,
-  title     = {SlipSense: Multimodal Tactile Learning for Low-Latency and Generalized Slip Detection},
-  author    = {Jian, Tong and Senthil Kumar, Aditya Thurvas and Li, Xinyi and Chen, Ziling and Dai, Tianyu and Sengul, Ali and Grimaldi, Matteo and Lu, Wenjie and Nabi, Saleh and Yu, Tao},
+<!-- Reference -->
+<section id="citation" class="section" style="background: #fafafa;">
+  <div class="container is-max-desktop">
+    <div class="citation-layout">
+      <p class="eyebrow">Reference</p>
+      <h2 class="title is-3">Cite SlipSense</h2>
+      <p class="citation-title">SlipSense: Multimodal Tactile Learning for Low-Latency and Generalized Slip Detection</p>
+      <p class="citation-meta">[1] T. Jian, A.T. Senthil Kumar, X. Li, Z. Chen, T. Dai, A. Sengul, M. Grimaldi, W. Lu, S. Nabi, and T. Yu &middot; CoRL 2026 &middot; arXiv:2609.15910</p>
+      <div class="citation-actions">
+        <a class="citation-link" href="https://arxiv.org/abs/2609.15910" target="_blank" rel="noopener">View arXiv</a>
+        <button class="copy-button" type="button" data-copy-bibtex>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+          <span>Copy BibTeX</span>
+        </button>
+      </div>
+      <pre id="bibtex" hidden><code>@inproceedings{slipsense2026,
+  title     = {SlipSense: Multimodal Tactile Learning for
+               Low-Latency and Generalized Slip Detection},
+  author    = {Tong Jian and Aditya Thurvas Senthil Kumar
+               and Xinyi Li and Ziling Chen and Tianyu Dai
+               and Ali Sengul and Matteo Grimaldi and Wenjie Lu
+               and Saleh Nabi and Tao Yu},
   booktitle = {Conference on Robot Learning (CoRL)},
   year      = {2026},
+  eprint    = {2609.15910},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url       = {https://arxiv.org/abs/2609.15910}
 }</code></pre>
+    </div>
   </div>
 </section>
 
-<footer class="footer">
+<footer class="site-footer">
   <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content" style="text-align: center;">
-          <p>
-            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
-          </p>
-        </div>
-      </div>
-    </div>
+    <div><strong>SlipSense</strong> &middot; Accepted at CoRL 2026</div>
+    <p>Dexterous AI Group, Analog Devices, Inc.</p>
   </div>
 </footer>
+
+<script>
+  const copyBtn = document.querySelector('[data-copy-bibtex]');
+  const bibtexEl = document.getElementById('bibtex');
+  if (copyBtn && bibtexEl) {
+    copyBtn.addEventListener('click', async () => {
+      const label = copyBtn.querySelector('span');
+      const value = bibtexEl.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(value);
+      } catch (_) {
+        const ta = document.createElement('textarea');
+        ta.value = value;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+      }
+      label.textContent = 'Copied';
+      copyBtn.classList.add('is-copied');
+      setTimeout(() => {
+        label.textContent = 'Copy BibTeX';
+        copyBtn.classList.remove('is-copied');
+      }, 1800);
+    });
+  }
+
+  // Active nav highlighting on scroll
+  const navLinks = document.querySelectorAll('.section-nav__links a');
+  const sections = [];
+  navLinks.forEach(link => {
+    const id = link.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) sections.push({ id, el, link });
+  });
+  const navHeight = 60;
+  function updateActiveNav() {
+    let current = sections[0];
+    for (const s of sections) {
+      if (s.el.getBoundingClientRect().top <= navHeight + 10) current = s;
+    }
+    navLinks.forEach(l => l.classList.remove('is-active'));
+    if (current) current.link.classList.add('is-active');
+  }
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
+</script>
 
 </body>
 </html>
